@@ -8,14 +8,14 @@ _start:
 
 main:
 	xor ecx, ecx
-	mov cl, 0x1c
+	mov cl, 0x17 + 1
 	mov al, 0x27 ; key
 	pop ebx
 
 decrypt:
 	dec ecx
 	jz cypher
-	xor [ebx + ecx + 1], al
+	xor [ebx + ecx - 1], al
 	jmp decrypt
 
 callback:
