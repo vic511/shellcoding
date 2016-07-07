@@ -1,7 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <sys/mman.h>
-#include <string.h>
 
 #define MAX_SIZE 0xffff
 #define log(...) fprintf(stderr, __VA_ARGS__);
